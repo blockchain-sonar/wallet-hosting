@@ -6,7 +6,6 @@
 
 	<meta charset="UTF-8">
 	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
-	<meta name="description" content="A Free TON Wallet was created by #137 Contest">
 
 	<!-- iOS meta tags & icons -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,7 +16,7 @@
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="crystal.png" />
 
-	<title>Free TON Wallet</title>
+	<title>Free TON Wallet (DEVEL)</title>
 	<link rel="manifest" href="manifest.json">
 </head>
 
@@ -25,11 +24,11 @@
 	<script>
 		if ('serviceWorker' in navigator) {
 			window.addEventListener('flutter-first-frame', function () {
-				navigator.serviceWorker.register('flutter_service_worker.js');
+				navigator.serviceWorker.register('flutter_service_worker.js?v=3089547815');
 			});
 		}
 	</script>
-	<script src="ton-client-web-js-umd-facade.js" type="application/javascript"></script>
+	<script src="ton-client-web-js-umd-facade.devel.js" type="application/javascript"></script>
 	<script src="main.dart.js" type="application/javascript"></script>
 </body>
 
