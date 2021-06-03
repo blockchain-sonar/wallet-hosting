@@ -4,12 +4,12 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "3245d377cbb7e34a94ab874bf672ca15",
-"index.html": "cda6b93606068d31b96f7719712d2c2d",
-"/": "cda6b93606068d31b96f7719712d2c2d",
+"index.html": "ee2a47f525698223ab3dca50685bd517",
+"/": "ee2a47f525698223ab3dca50685bd517",
 "index-webapp.html": "edecf1983ea409d4a326046708bf057b",
 "tonclient.wasm": "dfe6e15effdbc7ddddf9795d9bc9f2dd",
 "index-extenstion.html": "6cf6982ed876a030c8a72fc74742b325",
-"main.dart.js": "34c8b87b4ca70f1e34d3b105f57a8e02",
+"main.dart.js": "e17100fd7548f76dafb2f31fb3a09759",
 "index-webapp-devel.html": "fe39b2c7334193be6c9428ac295a2ed3",
 "404.html": "92363eefcbf707f7a51e7fc353810c39",
 "extension_loader.js": "bd5f00a53238e4cb40816630eb7d7456",
@@ -21,9 +21,9 @@ const RESOURCES = {
 "extenstion.html": "68b41cfb48468b5a4b2bf4701ffac171",
 "ton-client-web-js-umd-facade.js": "aecff44e8c9a1a8eb1a8dbe966d4ddb7",
 "assets/AssetManifest.json": "303c7b04374fb2e2a8b4f63905faf6c0",
-"assets/NOTICES": "73e24f58fc22b350cd9bcdc631bfde84",
+"assets/NOTICES": "588a4cd7d7e1a8dae69f6128ebee1e29",
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
+"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "assets/assets/freeton-256.png": "6afc1776ee2756ec7928700358a03e39",
 "assets/assets/freeton-128.png": "ed4479a91325f5a304cebe0ddd4dfe5f"
 };
@@ -43,7 +43,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
